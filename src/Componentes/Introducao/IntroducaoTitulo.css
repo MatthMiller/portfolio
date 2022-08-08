@@ -1,0 +1,67 @@
+.Introducao-titulo-spinner-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    position: relative;
+}
+
+.Introducao-titulo {
+    font-family: 'Bitter', serif;
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 4rem;
+    color: #EFEFEF;
+    z-index: 2;
+}
+
+/* Faz com que o spinner não crie
+barra de scroll horizontal */
+/* nao ta funcionando mobile isso: */
+/* body {
+    overflow-x: none;
+} */
+/* Preciso arrumar isso ainda */
+
+.Introducao-spinner {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: block;
+    opacity: 50%;
+    align-self: center;
+    justify-self: center;
+
+    z-index: 1;
+    animation: InfiniteSpin 9s linear infinite;
+}
+
+@keyframes InfiniteSpin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 900px) {
+    .Introducao-titulo {
+        grid-column: 1/-1;
+    }
+
+    .Introducao-spinner {
+        position: absolute;
+        top: -40px;
+        right: -25px;
+    }
+}
+
+@media (max-width: 675px) {
+    .Introducao-titulo {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+}

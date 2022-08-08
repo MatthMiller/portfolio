@@ -1,0 +1,22 @@
+.Header-logo {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 1.875rem;
+    color: #EFEFEF;
+}
+
+.Header-logo span {
+    font-weight: 500;
+    background: linear-gradient(rgba(217, 14, 14, 1), rgba(154, 14, 12, 1));
+    background-size: 100%;
+    background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+/*  (? dúvida)
+    usar <br> no componente se 
+    a resolução for mobile
+    {maxWidth < 550 ? </br> : null}
+*/

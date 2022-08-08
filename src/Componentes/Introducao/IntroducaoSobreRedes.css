@@ -1,0 +1,59 @@
+.Introducao-sobre-redes-container {
+    margin: 50px 0;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 2.75fr 1fr max-content;
+}
+
+.Introducao-sobre-redes-container h3 {
+    font-family: 'Bitter', serif;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2rem;
+    color: #EFEFEF;
+}
+
+.Introducao-sobre-redes-sobre-mim-texto {
+    margin-top: 30px;
+    font-family: 'Bitter', serif;
+    font-weight: 400;
+    color: #D6D6D6;
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+    max-width: 34.375rem;
+}
+
+.Introducao-sobre-redes-sobre-mim-texto span {
+    font-weight: 700;
+}
+
+.Introducao-sobre-redes-canais-de-contato {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    font-size: 3.75rem;
+    line-height: 3.75rem;
+    text-transform: uppercase;
+    color: #131313;
+    align-self: center;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.Introducao-sobre-redes-container nav {
+    place-self: center;
+}
+
+@media (max-width: 860px) {
+    .Introducao-sobre-redes-container {
+        grid-template-columns: 1fr max-content;
+    }
+
+    .Introducao-sobre-redes-sobre-mim {
+        grid-column: 1/3;
+    }
+}

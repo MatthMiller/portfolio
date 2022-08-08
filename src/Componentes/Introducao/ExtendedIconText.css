@@ -1,0 +1,46 @@
+.ExtendedIconText {
+    font-family: 'Bitter', serif;
+    font-size: 1.125rem;
+    line-height: 1.125rem;
+    padding: 16px 12px;
+    color: #D6D6D6;
+    background-color: #050505;
+    /* cima esquerda | cima direita | baixo direita | baixo esquerda */
+    border-radius: 4px 0px 0px 4px;
+    align-self: center;
+
+    /* última alteração que serviu pra não empurrar o
+    "Canais de Contato" */
+    position: absolute;
+    right: 50px;
+}
+
+/* Pega apenas os links */
+@media (pointer: fine) {
+    .ExtendedIconText a {
+        transition: 150ms;
+    }
+
+    .ExtendedIconText a:hover {
+        color: #3430FF;
+        text-decoration: underline;
+    }
+}
+
+.ExtendedIconText {
+    z-index: 1;
+    cursor: initial;
+    animation: Extend 300ms;
+}
+
+@keyframes Extend {
+    from {
+        transform: translate3d(20px, 0, 0);
+        opacity: 0%;
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 100%;
+    }
+}

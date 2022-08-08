@@ -1,0 +1,31 @@
+/* Nota: Pras animações com svgs/imagens darem certo
+Eu preciso de uma tela de loading. Provavelmente vou
+aprender depois de fazer o Dogs no curso do Origamid */
+
+.Animacao-entrada-200 {
+    animation: animarNaEntrada 200ms forwards;
+}
+
+.Animacao-entrada-300 {
+    animation: animarNaEntrada 300ms forwards;
+}
+
+.Animacao-entrada-400 {
+    animation: animarNaEntrada 400ms forwards;
+}
+
+.Animacao-entrada-500 {
+    animation: animarNaEntrada 500ms forwards;
+}
+
+@keyframes animarNaEntrada {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -30px, 0)
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0)
+    }
+}
