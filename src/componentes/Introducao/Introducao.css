@@ -31,4 +31,8 @@
     .Introducao-container {
         margin: 0 10px;
     }
+
+    .Introducao-horizontal-decorator {
+        margin-top: 34px;
+    }
 }

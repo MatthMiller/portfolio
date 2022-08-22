@@ -15,6 +15,12 @@
     -moz-text-fill-color: transparent;
 }
 
+@media (max-width: 1150px) {
+    .Header-logo {
+        font-size: 1.5rem;
+    }
+}
+
 /*  (? dúvida)
     usar <br> no componente se 
     a resolução for mobile

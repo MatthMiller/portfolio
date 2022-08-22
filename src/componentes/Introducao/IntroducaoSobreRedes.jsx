@@ -40,12 +40,6 @@ const IntroducaoSobreRedes = () => {
       */}
       <nav>
         <ExtensibleIcon 
-        // passar um array ou objeto com os dois ícones
-        // [inativo/ativo]
-        // {
-        //  active: talicone,
-        // inactive: ttaloutroicon
-        // }
           icon={[gitHubIcon, gitHubIconActive]}
           alt={'GitHub Icon'}
           text='github.com/MatthMiller'

@@ -32,3 +32,33 @@
         gap: 25px;
     }
 }
+
+@media (max-width: 1150px) {
+    .Navbar-anchor,
+    .Header-logo {
+        transition: 200ms;
+    }
+
+    .Navbar-anchor {
+        transform: scale(0.9);
+    }
+
+    .Navbar-container {
+        gap: 8px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    .Navbar-container {
+        place-content: center;
+    }
+}
+
+/* Full mobile, menu fica na vertical */
+@media (max-width: 600px) {
+    .Navbar-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

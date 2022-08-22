@@ -12,7 +12,7 @@ const Logo = () => {
     <a href="./" ref={elementoAnimado}>
       <h1 className='Header-logo'>
         <span>{'<'}</span>
-          Matheus Monteiro
+          MatheusMonteiro
         <span>{' />'}</span>
       </h1>
     </a>
