@@ -3,6 +3,10 @@ import portfolioTitle from '../../img/portfolio-title.svg';
 import styles from './Portfolio.module.css';
 import Project from './Project';
 
+// Imagens dos slides
+// BMC
+import bmc0 from '../../img/slides/bmc/bmc-0.png'
+
 const Portfolio = () => {
   return (
     <section className={styles.container} id='Portfolio-container'>
@@ -13,7 +17,7 @@ const Portfolio = () => {
       <div className={styles.divisorLine} style={{ height: '216px' }}></div>
 
       <Project
-        slides={[]}
+        slides={[bmc0]}
         projectTitle='UI/UX Design - Aplicativo de câmbio'
         slidesTitle='Design System Mobile “BMC - Câmbio”'
         detailsDate='nov. à dez. de 2021'

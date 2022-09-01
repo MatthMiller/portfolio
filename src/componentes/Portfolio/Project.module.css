@@ -25,6 +25,7 @@
 .slides {
     display: grid;
     justify-items: center;
+    align-content: start;
 }
 
 .detailsTitle,
@@ -106,6 +107,7 @@
     box-shadow: 3px 3px #0D0D0D, 5px 5px rgba(224, 35, 25, 1);
 
     transition: 200ms;
+    cursor: pointer;
 }
 
 .fullscreenBtn :hover {
@@ -115,3 +117,13 @@
     border: 2px solid #D0130A;
     box-shadow: none;
 }
+
+.slideContainer {
+    max-width: 460px; /* manter esse valor*/
+}
+
+.slide {
+    max-width: 100%;
+}
+
+/* fazer a barra vermelha embaixo com uma div */
