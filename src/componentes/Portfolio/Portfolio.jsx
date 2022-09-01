@@ -13,6 +13,7 @@ const Portfolio = () => {
       <div className={styles.divisorLine} style={{ height: '216px' }}></div>
 
       <Project
+        slides={[]}
         projectTitle='UI/UX Design - Aplicativo de câmbio'
         slidesTitle='Design System Mobile “BMC - Câmbio”'
         detailsDate='nov. à dez. de 2021'

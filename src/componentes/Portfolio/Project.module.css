@@ -10,24 +10,44 @@
     max-width: max-content;
     margin: 0 auto;
     margin-top: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .project {
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    gap: 80px;
 }
 
-.details {
+.details, 
+.slides {
     display: grid;
     justify-items: center;
 }
 
-.detailsTitle {
+.detailsTitle,
+.slidesTitle {
     font-family: 'Bitter', serif;
     font-size: 1.5rem;
     line-height: 1.5rem;
+    font-weight: 400;
     color: #EFEFEF;
+}
+
+.slidesTitle {
+    line-height: 1.8rem;
+    margin-bottom: 50px;
+}
+
+.slidesTitle::after {
+    display: block;
+    margin-top: 4px;
+    content: '';
+    height: 2px;
+    width: 78px;
+    background: linear-gradient(180deg, #E02319 0%, #D0130A 100%);
 }
 
 .detailsTitle span {
