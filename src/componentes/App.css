@@ -28,6 +28,13 @@ ul, li {
   padding: 0;
 }
 
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -42,4 +49,4 @@ a {
   -moz-text-fill-color: transparent;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;500&family=Roboto+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap');

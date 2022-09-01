@@ -1,4 +1,9 @@
-.PortfolioTitle img {
+.container {
+    background-color:#050505;
+    padding-top: 100px;
+}
+
+.sectionTitle img {
     margin: 0 auto;
     display: block;
     padding: 11px 29px;
@@ -7,3 +12,10 @@
     border-image: linear-gradient(180deg, #E02319, #D0130A) 1;
     margin-bottom: 20px;
 }
+
+.divisorLine {
+    margin: 0 auto;
+    background-color: #EFEFEF;
+    width: 2px;
+}
+

@@ -66,6 +66,11 @@
 }
 
 @media (max-width: 500px) {
+    .Introducao-sobre-redes-canais-de-contato {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
     .Introducao-sobre-redes-container {
         margin-top: 34px;
     }

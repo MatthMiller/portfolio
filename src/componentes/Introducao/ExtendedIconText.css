@@ -4,6 +4,7 @@
     line-height: 1.125rem;
     padding: 16px 12px;
     color: #D6D6D6;
+    text-overflow: ellipsis;
     background-color: #050505;
     /* cima esquerda | cima direita | baixo direita | baixo esquerda */
     border-radius: 4px 0px 0px 4px;

@@ -55,7 +55,7 @@ const IntroducaoSobreRedes = () => {
           icon={[emailIcon, emailIconActive]}
           alt={'Email Icon'}
           text='matheus.monteiro.genesis@gmail.com'
-          href='mailto: matheus.monteiro.genesis@gmail.com'
+          href=''
         />
         <ExtensibleIcon 
           icon={[discordIcon, discordIconActive]}
