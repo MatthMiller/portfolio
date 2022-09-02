@@ -30,7 +30,7 @@ const SlideArrow = ({ fill, left, setActualSlide, setActualIndex, actualIndex, s
   return (
     <div
       className={styles.slideArrow}
-      onTouchStart={handleClick}
+      // onTouchStart={handleClick}
       onClick={handleClick}
     >
       <svg style={left ? {transform: 'rotate(180deg)'} : null}
