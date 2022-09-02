@@ -52,7 +52,7 @@ const Project = ({ projectTitle, slidesTitle, slides, detailsDate, mobileVersion
                     `${styles.slideProgressBall} ${styles.ballFilled}` : 
                     styles.slideProgressBall}
                 />
-              {mobileVersion ? 
+                {mobileVersion ? 
                 <div 
                   key={index}
                   className={index === actualIndex ?
