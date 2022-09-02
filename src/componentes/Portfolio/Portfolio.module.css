@@ -20,3 +20,9 @@
     width: 2px;
 }
 
+
+@media (max-width: 500px) {
+    .sectionTitle img {
+        transform: scale(0.9);
+    }
+} 
