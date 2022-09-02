@@ -1,15 +1,16 @@
 import React from 'react';
 import styles from './Project.module.css';
 import portfolioBtn from '../../img/portfolio-btn.svg';
+import SlideArrow from '../../img/SlideArrow';
 
-const Project = ({ projectTitle, slidesTitle, slides, detailsDate, children }) => {
-  console.log(slides);
 
-  const [actualSlide, setActualSlide] = React.useState('' + slides[0]);
-  console.log(slides, actualSlide);
+const Project = ({ projectTitle, slidesTitle, slides, detailsDate, mobileVersion, children }) => {
+  const [actualIndex, setActualIndex] = React.useState(0)
+  const [actualSlide, setActualSlide] = React.useState(slides[actualIndex]);
+  // console.log(slides, actualSlide);
 
   return (
-    <section>
+    <section className={styles.projectContainer}>
       <h2 className={styles.projectTitle}>
         {projectTitle}
       </h2>
@@ -20,11 +21,47 @@ const Project = ({ projectTitle, slidesTitle, slides, detailsDate, children }) =
             {slidesTitle}
           </h3>
           <div className={styles.slideContainer}>
+            <SlideArrow
+              left={true}
+              fill={'#EFEFEF'}
+              setActualIndex={setActualIndex}
+              actualIndex={actualIndex}
+              setActualSlide={setActualSlide}
+              slides={slides}
+            />
             <img
               className={styles.slide}
               src={actualSlide}
               alt='Slide'
             />
+            <SlideArrow
+              left={false}
+              fill={'#EFEFEF'}
+              setActualIndex={setActualIndex}
+              actualIndex={actualIndex}
+              setActualSlide={setActualSlide}
+              slides={slides}
+            />
+          </div>
+          <div className={styles.slideProgressContainer}>
+            {[...slides].map((element, index) => (
+              <>
+                <div 
+                  key={index}
+                  className={index === actualIndex ?
+                    `${styles.slideProgressBall} ${styles.ballFilled}` : 
+                    styles.slideProgressBall}
+                />
+              {mobileVersion ? 
+                <div 
+                  key={index}
+                  className={index === actualIndex ?
+                    `${styles.slideProgressBall} ${styles.ballFilled}` : 
+                    styles.slideProgressBall}
+                />
+              : null}
+              </>
+            ))}
           </div>
         </div>
         <div className={styles.details}>

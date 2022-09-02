@@ -1,3 +1,7 @@
+.projectContainer {
+    margin-bottom: 50px;
+}
+
 .projectTitle {
     font-family: 'Roboto Mono', monospace;
     font-weight: 400;
@@ -120,10 +124,30 @@
 
 .slideContainer {
     max-width: 460px; /* manter esse valor*/
+    display: grid;
+    grid-template-columns: auto 460px auto;
+    align-items: center;
+    justify-content: center;
 }
 
 .slide {
     max-width: 100%;
 }
 
-/* fazer a barra vermelha embaixo com uma div */
+.slideProgressContainer {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.slideProgressBall {
+    transition: 150ms;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #383838;
+}
+
+.ballFilled {
+    background-color: #E02319;
+}

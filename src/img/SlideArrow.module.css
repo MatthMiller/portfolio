@@ -1,0 +1,14 @@
+.slideArrow {
+    padding: 18px 25px; 
+    cursor: pointer;
+    user-select: none;
+}
+
+.slideArrow:hover path {
+    fill: #E02319;
+}
+
+.slideArrow path {
+    transition: 150ms;
+
+}
