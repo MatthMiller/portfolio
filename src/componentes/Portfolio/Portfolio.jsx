@@ -48,7 +48,7 @@ const Portfolio = () => {
         slides={[temvagas0, temvagas1, temvagas2, temvagas3, temvagas4, temvagas5]}
         projectTitle='UI/UX Design - Dashboard e site de empregos'
         slidesTitle='Design System Responsivo “TemVagas”'
-        detailsDate='nov. à dez. de 2021'
+        detailsDate='fev. à mar. de 2022'
         mobileVersion={false}
       >
         <p>Protótipo de aplicação mobile criado em <span>baixa</span> e <span>alta fidelidade</span>, utilizando o software Figma.</p>
