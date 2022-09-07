@@ -7,7 +7,6 @@ import SlideArrow from '../../img/SlideArrow';
 const Project = ({ projectTitle, slidesTitle, slides, detailsDate, mobileVersion, children }) => {
   const [actualIndex, setActualIndex] = React.useState(0)
   const [actualSlide, setActualSlide] = React.useState(slides[actualIndex]);
-  // console.log(slides, actualSlide);
 
   return (
     <section className={styles.projectContainer}>
@@ -53,7 +52,7 @@ const Project = ({ projectTitle, slidesTitle, slides, detailsDate, mobileVersion
                     styles.slideProgressBall}
                 />
                 {mobileVersion ? 
-                <div 
+                <div
                   key={index}
                   className={index === actualIndex ?
                     `${styles.slideProgressBall} ${styles.ballFilled}` : 

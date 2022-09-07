@@ -1,0 +1,24 @@
+.container {
+    margin: 0 auto;
+    margin-top: 50px;
+    max-width: max-content;
+}
+
+.sectionTitle img {
+    margin: 0 auto;
+    display: block;
+    padding: 11px 29px;
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(180deg, #E02319, #D0130A) 1;
+    margin-bottom: 60px;
+}
+
+.tabContainer {
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.tabIconContainer {
+    display: flex;
+}

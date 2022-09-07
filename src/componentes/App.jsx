@@ -4,6 +4,7 @@ import Introducao from './Introducao/Introducao';
 import Portfolio from './Portfolio/Portfolio';
 import './App.css';
 import './AnimacoesGerais.css';
+import Tecnologias from './Tecnologias/Tecnologias';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Header />
       <Introducao />
       <Portfolio />
+      <Tecnologias />
     </>
   );
 }

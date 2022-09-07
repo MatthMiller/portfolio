@@ -1,7 +1,7 @@
 .container {
     background-color:#050505;
     padding-top: 100px;
-    padding-bottom: 100px; /* APAGAR DEPOIS */ 
+    padding-bottom: 32px;
 }
 
 .sectionTitle img {
@@ -20,6 +20,13 @@
     width: 2px;
 }
 
+.divisorLineEnd {
+    margin-top: 15px;
+    background: linear-gradient(180deg, #E02319, #D0130A);
+    height: 3px;
+    width: 40px;
+    margin: 0 auto;
+}
 
 @media (max-width: 500px) {
     .sectionTitle img {

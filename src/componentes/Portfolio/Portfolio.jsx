@@ -69,6 +69,9 @@ const Portfolio = () => {
         <p>Foi feito <span>Design System próprio</span> para a empresa, com paleta de cores, variáveis tipográficas e espaçamentos bem definidos.</p>
         <p>Foi utilizado amplamente <span>conceitos de UX</span> e <span>testes de usabilidade</span> durante o seu desenvolvimento</p>
       </Project>
+
+      <div className={styles.divisorLine} style={{ height: '216px', marginBottom: '15px' }}></div>
+      <div className={styles.divisorLineEnd}/>
     </section>
   );
 }
