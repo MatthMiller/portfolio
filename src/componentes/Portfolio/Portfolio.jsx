@@ -12,7 +12,7 @@ import bmc0 from '../../img/slides/bmc/bmc-0.png';
 import bmc1 from '../../img/slides/bmc/bmc-1.png';
 import bmc2 from '../../img/slides/bmc/bmc-2.png';
 // TemVagas
-import temvagas0 from '../../img/slides/temvagas/temvagas-0.png';
+// import temvagas0 from '../../img/slides/temvagas/temvagas-0.png';
 import temvagas1 from '../../img/slides/temvagas/temvagas-1.png';
 import temvagas2 from '../../img/slides/temvagas/temvagas-2.png';
 import temvagas3 from '../../img/slides/temvagas/temvagas-3.png';
@@ -45,7 +45,7 @@ const Portfolio = () => {
       <div className={styles.divisorLine} style={{ height: '216px' }}></div>
 
       <Project
-        slides={[temvagas0, temvagas1, temvagas2, temvagas3, temvagas4, temvagas5]}
+        slides={[temvagas1, temvagas2, temvagas3, temvagas4, temvagas5]}
         projectTitle='UI/UX Design - Dashboard e site de empregos'
         slidesTitle='Design System Responsivo “TemVagas”'
         detailsDate='fev. à mar. de 2022'

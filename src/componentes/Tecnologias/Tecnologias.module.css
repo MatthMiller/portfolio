@@ -15,10 +15,133 @@
 }
 
 .tabContainer {
+    max-width: 550px;
     display: grid;
     grid-template-rows: auto auto;
 }
 
+.icon {
+    transition: 200ms;
+}
+
 .tabIconContainer {
     display: flex;
+}
+
+.tabIcon {
+    display: flex;
+    background-color: #252525;
+    box-shadow: inset 0 0 0 1px #191919;
+    padding: 6px 8px;
+    transition: 200ms;
+}
+
+.tabIcon:hover {
+    box-shadow: inset 0 0 0 1px #BBBBBB;
+    cursor: pointer;
+}
+
+.tabIcon.active {
+    background-color: #050505;
+    box-shadow: inset 0 0 0 1px #E02319;
+}
+
+.tabIcon input[type="radio"] {
+    position: absolute;
+    width: 0;
+}
+
+.tabContent {
+    display: grid;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.tabTitle::before {
+    content: '';
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    background-color: #E02319;
+    margin-right: 10px;
+    animation: 300ms animeEntry forwards;
+}
+
+.tabTitle {
+    font-family: 'Bitter', serif;
+    font-weight: 400;
+    background-color: #050505;
+    color: #EFEFEF;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    border-radius: 0px 4px 0px 0px;
+    /* gap: 10px; */
+}
+
+.tabTitleText {
+    animation: 300ms animeEntry forwards;
+}
+
+.tabTitle .mediumWeight {
+    font-weight: 500;
+    margin-right: 4px;
+}
+
+.tabList {
+    display: grid;
+    background-color: #121212;
+    padding: 20px 20px 30px 20px;
+    gap: 15px;
+    border-radius: 0px 0px 4px 4px;
+}
+
+.divisorLine {
+    background-color: #191919;
+    height: 2px;
+}
+
+.tabList li {
+    font-family: 'Bitter', serif;
+    color: #D6D6D6;
+    font-size: 1rem;
+    line-height: 1.3125rem;
+    animation: 500ms animeAppears forwards;
+}
+
+.tabList li .itemDescription {
+    color: #BBBBBB;
+}
+
+.tabList li b {
+    font-weight: 500;
+    background: linear-gradient(rgba(217, 14, 14, 1), rgba(154, 14, 12, 1));
+    background-size: 100%;
+    background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+@keyframes animeEntry {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes animeAppears {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
