@@ -22,12 +22,12 @@ const Navbar = () => {
       <NavItem 
         img={tecnologiasBtn}
         alt=''
-        href='.'
+        href='#Tecnologias-container'
       />
       <NavItem 
         img={contatoBtn}
         alt=''
-        href='.'
+        href='#Contato-container'
       />
     </nav>
   )

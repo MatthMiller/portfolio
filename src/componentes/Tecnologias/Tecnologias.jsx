@@ -30,7 +30,7 @@ const Tecnologias = () => {
   const [tabTecnologia, setTabTecnologia] = React.useState('front-end');
 
   return (
-    <section className={styles.container} id='Portfolio-container'>
+    <section className={styles.container} id='Tecnologias-container'>
       <h2 className={styles.sectionTitle}>
         <img src={tecnologiasTitle} alt='Título Tecnologias' />
       </h2>
@@ -108,14 +108,14 @@ const Tecnologias = () => {
           <div className={styles.tabContent}>
             <h3 className={styles.tabTitle}>
               <span className={styles.tabTitleText}>
-                <span className={styles.mediumWeight}>Design - </span>
-                Ferramentas e abordagem
+                <span className={styles.mediumWeight}>Outras linguagens e habilidades
+                </span>
               </span>
             </h3>
             <ul className={styles.tabList}>
-              <li>Softwares de prototipação/edição<b>:</b> <span className={styles.itemDescription}>Figma, Adobe Xd, Adobe Photoshop</span><b>;</b></li>
+              <li>Linguagens/bibliotecas back-end<b>:</b> <span className={styles.itemDescription}>Java, Python, Flask, Node js, Express js</span><b>;</b></li>
               <div className={styles.divisorLine} />
-              <li>Utilitários<b>:</b><span className={styles.itemDescription}> ESLint, Webpack, Babel, GIT, NPM/Yarn</span><b>;</b></li>
+              <li>Banco de dados<b>:</b><span className={styles.itemDescription}> MySQL, MongoDB</span><b>;</b></li>
             </ul>
           </div>
         : null}
