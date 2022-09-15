@@ -17,7 +17,7 @@ const Project = ({ projectTitle, slidesTitle, slides, detailsDate, mobileVersion
   }
 
   React.useEffect(() => {
-    document.body.addEventListener('keydown', handleKeydown);
+    document.body.addEventListener('keydown', handleKeydown, {once: true});
   });
 
   const openModal = () => {

@@ -21,7 +21,7 @@ import temvagas5 from '../../img/slides/temvagas/temvagas-5.png';
 
 const Portfolio = () => {
   return (
-    <section className={styles.container} id='Portfolio-container'>
+    <section className={styles.container} id='Portfolio'>
       <h2 className={styles.sectionTitle}>
         <img src={portfolioTitle} alt='Título Portfólio' />
       </h2>

@@ -17,17 +17,17 @@ const Navbar = () => {
       <NavItem 
         img={portfolioBtn}
         alt=''
-        href='#Portfolio-container'
+        href='#Portfolio'
       />
       <NavItem 
         img={tecnologiasBtn}
         alt=''
-        href='#Tecnologias-container'
+        href='#Tecnologias'
       />
       <NavItem 
         img={contatoBtn}
         alt=''
-        href='#Contato-container'
+        href='#Contato'
       />
     </nav>
   )

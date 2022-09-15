@@ -11,7 +11,7 @@ const Contato = () => {
 
   return (
     <>
-    <section className={styles.container} id='Contato-container'>
+    <section className={styles.container} id='Contato'>
       <h2 className={styles.sectionTitle}>
         <img src={contatoTitle} alt='Título Contato' />
       </h2>
@@ -32,12 +32,12 @@ const Contato = () => {
             type='text'
             id='nome'
             placeholder='Digite seu nome aqui'
-            maxlength='80'
+            maxLength='80'
           />
           <label
             className={styles.label}
             htmlFor='email'
-            maxlength='80'
+            maxLength='80'
           >
             E-mail
           </label>
@@ -58,7 +58,7 @@ const Contato = () => {
             type='text'
             id='assunto'
             placeholder='Propostas de trabalho, dúvidas'
-            maxlength='80'
+            maxLength='80'
           />
           <label 
             className={styles.label}
@@ -72,7 +72,7 @@ const Contato = () => {
             placeholder='Digite aqui sua mensagem'
             cols='30' 
             rows='8'
-            maxlength='500'
+            maxLength='500'
           />
           <button className={styles.enviarBtn}>
             <img src={enviarBtn} alt='Ver em tela cheia' />

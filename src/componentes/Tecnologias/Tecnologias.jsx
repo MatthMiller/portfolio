@@ -30,7 +30,7 @@ const Tecnologias = () => {
   const [tabTecnologia, setTabTecnologia] = React.useState('front-end');
 
   return (
-    <section className={styles.container} id='Tecnologias-container'>
+    <section className={styles.container} id='Tecnologias'>
       <h2 className={styles.sectionTitle}>
         <img src={tecnologiasTitle} alt='Título Tecnologias' />
       </h2>
