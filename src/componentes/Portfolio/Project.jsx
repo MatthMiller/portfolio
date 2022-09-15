@@ -8,6 +8,17 @@ const Project = ({ projectTitle, slidesTitle, slides, detailsDate, mobileVersion
   const [actualIndex, setActualIndex] = React.useState(0)
   const [actualSlide, setActualSlide] = React.useState(slides[actualIndex]);
   const [slideFullscreen, setSlideFullscreen] = React.useState(null);
+  
+  const handleKeydown = (event) => {
+    if (event.key === 'Escape') {
+      setSlideFullscreen(null);
+      document.body.removeEventListener('keydown', handleKeydown);
+    }
+  }
+
+  React.useEffect(() => {
+    document.body.addEventListener('keydown', handleKeydown);
+  });
 
   const openModal = () => {
     setSlideFullscreen(true);
@@ -16,8 +27,10 @@ const Project = ({ projectTitle, slidesTitle, slides, detailsDate, mobileVersion
   const closeModal = ({ target }) => {
     if (target.id === 'foraModal') {
       setSlideFullscreen(null);
+      document.body.removeEventListener('keydown', handleKeydown);
     }
   }
+
 
   return (
     <section className={styles.projectContainer}>
