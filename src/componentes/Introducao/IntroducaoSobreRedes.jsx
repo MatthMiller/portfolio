@@ -11,9 +11,18 @@ import discordIcon from '../../img/extensible-icon-discord.svg';
 import discordIconActive from '../../img/extensible-icon-discord-active.svg';
 
 const IntroducaoSobreRedes = () => {
+  const elementoAnimado = React.useRef();
+
+  React.useEffect(() => {
+    elementoAnimado.current.classList.add('Animacao-entrada-300');
+  }, []);
+
   return (
     <div className='Introducao-sobre-redes-container'>
-      <div className='Introducao-sobre-redes-sobre-mim'>
+      <div
+        ref={elementoAnimado} 
+        className='Introducao-sobre-redes-sobre-mim'
+      >
         <h3>
           Sobre Mim
           <span className='Linear-Gradient-Red-1-Text'>:</span>
