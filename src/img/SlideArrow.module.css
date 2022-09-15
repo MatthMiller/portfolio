@@ -4,8 +4,16 @@
     user-select: none;
 }
 
-.slideArrow:hover path {
-    fill: #E02319;
+@media (pointer: fine) {
+    .slideArrow:hover path {
+        fill: #E02319;
+    }
+}
+
+@media (pointer: coarse) {
+    .slideArrow:active path {
+        fill: #E02319;
+    }
 }
 
 .slideArrow path {

@@ -1,13 +1,16 @@
 import React from 'react';
 import styles from './Contato.module.css';
-import contatoTitle from '../../img/contato-title.svg'
+import contatoTitle from '../../img/contato-title.svg';
+import enviarBtn from '../../img/enviar-btn.svg';
 
 const Contato = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
+    alert('Formulário temporariamente indisponível. Contate-me por um dos meus canais de contato.')
   }
 
   return (
+    <>
     <section className={styles.container} id='Contato-container'>
       <h2 className={styles.sectionTitle}>
         <img src={contatoTitle} alt='Título Contato' />
@@ -29,10 +32,12 @@ const Contato = () => {
             type='text'
             id='nome'
             placeholder='Digite seu nome aqui'
+            maxlength='80'
           />
           <label
             className={styles.label}
             htmlFor='email'
+            maxlength='80'
           >
             E-mail
           </label>
@@ -53,6 +58,7 @@ const Contato = () => {
             type='text'
             id='assunto'
             placeholder='Propostas de trabalho, dúvidas'
+            maxlength='80'
           />
           <label 
             className={styles.label}
@@ -65,12 +71,25 @@ const Contato = () => {
             id='mensagem'
             placeholder='Digite aqui sua mensagem'
             cols='30' 
-            rows='10'
+            rows='8'
+            maxlength='500'
           />
-          <button>Enviar</button>
+          <button className={styles.enviarBtn}>
+            <img src={enviarBtn} alt='Ver em tela cheia' />
+          </button>
         </form>
+
       </div>
+
     </section>
+    <footer className={styles.footer}>
+      <p className={styles.email}>
+        <span className={styles.emoji}>📧 </span>
+        matheus.monteiro.genesis@gmail.com 
+        <span className={styles.emoji}> 📧</span>
+      </p>
+    </footer>
+    </>
   )
 }
 

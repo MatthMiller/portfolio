@@ -11,9 +11,12 @@
     border-style: solid;
     border-image: linear-gradient(180deg, #E02319, #D0130A) 1;
     margin-bottom: 60px;
+    color: #EFEFEF;
 }
 
 .formContainer {
+    margin-left: 10px;
+    margin-right: 10px;
     display: grid;
     grid-template-columns: auto;
     place-content: center;
@@ -34,7 +37,8 @@
 
 .formTitle {
     font-size: 2rem;
-    line-height: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.8125rem;
     font-weight: 500;
     font-family: 'Bitter', serif;
     margin-bottom: 40px;
@@ -52,19 +56,20 @@
 
 .form {
     display: grid;
-    grid-template-columns: minmax(310px, 430px);
+    grid-template-columns: minmax(295px, 430px);
 }
 
 .label {
     font-family: 'Roboto Mono', monospace;
     font-size: 1rem;
     line-height: 1rem;
+    color: #D6D6D6;
 }
 
 .input, .textarea {
     margin-top: 5px;
     background-color: #1E1E1E;
-    border: 1.5px solid #121212;
+    border: 1px solid #121212;
     border-radius: 4px;
     /* width: 100%; */
     /* width: 550px; */
@@ -79,6 +84,88 @@
     margin-bottom: 20px;
 }
 
+.input {
+    transition: 200ms;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+    color: #737373;
+}
+
+.input:focus,
+.textarea:focus {
+    outline: none;
+    background-color: #121212;
+    border-color: #E02319;
+    box-shadow: 0 0 0 2px #FF655C;
+}
+
 .textarea {
     resize: none;
+}
+
+.enviarBtn {
+    place-self: end;
+    margin-bottom: 56px;
+}
+
+.enviarBtn img {
+    border: 2px solid #EFEFEF;
+    padding: 9.6px 16px;
+    box-shadow: 3px 3px #0D0D0D, 5px 5px rgba(224, 35, 25, 1);
+
+    transition: 200ms;
+    cursor: pointer;
+}
+
+@media (pointer: fine) {
+    .enviarBtn :hover {
+        position: relative;
+        transform: translate3d(5px, 5px, 0);
+        background: linear-gradient(180deg, #E02319 0%, #D0130A 100%);
+        border: 2px solid #D0130A;
+        box-shadow: none;
+    }
+}
+
+@media (pointer: coarse) {
+    .enviarBtn :active {
+        position: relative;
+        transform: translate3d(5px, 5px, 0);
+        background: linear-gradient(180deg, #E02319 0%, #D0130A 100%);
+        border: 2px solid #D0130A;
+        box-shadow: none;
+        animation: alternate;
+    }
+}
+
+
+.footer {
+    background-color: #0D0D0D;
+}
+
+.footer .email .emoji {
+    user-select: none;
+}
+
+.footer .email {
+    text-align: center;
+    font-family: 'Bitter', serif;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #EFEFEF;
+    padding: 20px 0;
+}
+
+@media (max-width: 440px) {
+    .enviarBtn {
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: 350px) {
+    .footer .email {
+        font-size: 0.85rem;
+    }
 }

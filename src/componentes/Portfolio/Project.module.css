@@ -127,12 +127,25 @@
     cursor: pointer;
 }
 
-.fullscreenBtn :hover {
-    position: relative;
-    transform: translate3d(5px, 5px, 0);
-    background: linear-gradient(180deg, #E02319 0%, #D0130A 100%);
-    border: 2px solid #D0130A;
-    box-shadow: none;
+@media (pointer: coarse) {
+    .fullscreenBtn :active {
+        position: relative;
+        transform: translate3d(5px, 5px, 0);
+        background: linear-gradient(180deg, #E02319 0%, #D0130A 100%);
+        border: 2px solid #D0130A;
+        box-shadow: none;
+        animation: alternate;
+    }
+}
+
+@media (pointer: fine) {
+    .fullscreenBtn :hover {
+        position: relative;
+        transform: translate3d(5px, 5px, 0);
+        background: linear-gradient(180deg, #E02319 0%, #D0130A 100%);
+        border: 2px solid #D0130A;
+        box-shadow: none;
+    }
 }
 
 .slideContainer {
@@ -163,6 +176,61 @@
 
 .ballFilled {
     background-color: #E02319;
+}
+
+.modalContainer {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2000;
+
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    animation: 200ms entryModalBackground forwards;
+}
+
+.modal .slide {
+    place-self: center;
+}
+
+.modal .slideContainer {
+    grid-template-columns: auto 60vw auto;
+}
+
+.modal .slideContainer.isMobile {
+    grid-template-columns: auto 40vw auto;
+}
+
+@media (max-width: 1000px) {
+    .modal .slideContainer.isMobile {
+        grid-template-columns: auto 60vw auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .modal .slideContainer.isMobile {
+        grid-template-columns: auto 80vw auto;
+    }
+
+    .modal .slideContainer {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@keyframes entryModalBackground {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @media (max-width: 1100px) {

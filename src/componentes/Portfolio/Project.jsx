@@ -7,6 +7,17 @@ import SlideArrow from '../../img/SlideArrow';
 const Project = ({ projectTitle, slidesTitle, slides, detailsDate, mobileVersion, children }) => {
   const [actualIndex, setActualIndex] = React.useState(0)
   const [actualSlide, setActualSlide] = React.useState(slides[actualIndex]);
+  const [slideFullscreen, setSlideFullscreen] = React.useState(null);
+
+  const openModal = () => {
+    setSlideFullscreen(true);
+  }
+  
+  const closeModal = ({ target }) => {
+    if (target.id === 'foraModal') {
+      setSlideFullscreen(null);
+    }
+  }
 
   return (
     <section className={styles.projectContainer}>
@@ -75,10 +86,71 @@ const Project = ({ projectTitle, slidesTitle, slides, detailsDate, mobileVersion
             {children}
           </div>
           <button className={styles.fullscreenBtn}>
-            <img src={portfolioBtn} alt='Ver em tela cheia' />
+            <img 
+              src={portfolioBtn} 
+              alt='Ver em tela cheia'
+              onClick={openModal}
+            />
           </button>
         </div>
     </div>
+
+    {slideFullscreen ?
+      <div 
+        onClick={closeModal}
+        className={styles.modalContainer}
+        id='foraModal'
+      >
+        <div className={styles.modal}>
+          <div className={styles.slides}>
+            <div className={mobileVersion ? `${styles.slideContainer} ${styles.isMobile}` 
+            : `${styles.slideContainer}`}>
+              <SlideArrow
+                left={true}
+                fill={'#EFEFEF'}
+                setActualIndex={setActualIndex}
+                actualIndex={actualIndex}
+                setActualSlide={setActualSlide}
+                slides={slides}
+              />
+              <img
+                className={styles.slide}
+                src={actualSlide}
+                alt='Slide'
+              />
+              <SlideArrow
+                left={false}
+                fill={'#EFEFEF'}
+                setActualIndex={setActualIndex}
+                actualIndex={actualIndex}
+                setActualSlide={setActualSlide}
+                slides={slides}
+              />
+            </div>
+            <div className={styles.slideProgressContainer}>
+              {[...slides].map((element, index) => (
+                <>
+                  <div 
+                    key={index}
+                    className={index === actualIndex ?
+                      `${styles.slideProgressBall} ${styles.ballFilled}` : 
+                      styles.slideProgressBall}
+                  />
+                  {mobileVersion ? 
+                  <div
+                    key={index}
+                    className={index === actualIndex ?
+                      `${styles.slideProgressBall} ${styles.ballFilled}` : 
+                      styles.slideProgressBall}
+                  />
+                : null}
+                </>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    : null}
   </section>
   )
 }
