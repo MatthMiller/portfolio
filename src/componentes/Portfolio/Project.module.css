@@ -38,6 +38,10 @@
     }
 }
 
+.slide {
+    cursor: pointer;
+}
+
 .details, 
 .slides {
     display: grid;

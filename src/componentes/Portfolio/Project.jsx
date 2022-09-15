@@ -56,6 +56,7 @@ const Project = ({ projectTitle, slidesTitle, slides, detailsDate, mobileVersion
               className={styles.slide}
               src={actualSlide}
               alt='Slide'
+              onClick={openModal}
             />
             <SlideArrow
               left={false}
