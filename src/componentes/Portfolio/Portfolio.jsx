@@ -6,7 +6,7 @@ import Project from './Project';
 // Imagens dos slides
 // Virtual Notebook
 import virtualnotebook0 from '../../img/slides/virtualnotebook/virtualnotebook-0.png';
-// import virtualnotebook1 from '../../img/slides/virtualnotebook/virtualnotebook-1.png';
+import virtualnotebook1 from '../../img/slides/virtualnotebook/virtualnotebook-1.png';
 // BMC
 import bmc0 from '../../img/slides/bmc/bmc-0.png';
 import bmc1 from '../../img/slides/bmc/bmc-1.png';
@@ -29,7 +29,7 @@ const Portfolio = () => {
       <div className={styles.divisorLine} style={{ height: '216px' }}></div>
 
       <Project
-        slides={[virtualnotebook0]}
+        slides={[virtualnotebook0, virtualnotebook1]}
         projectTitle='Front-End/Design - Programa Virtual Notebook'
         slidesTitle='Desenvolvimento Fullstack “Virtual Notebook”'
         detailsDate='Em desenvolvimento desde agosto'
