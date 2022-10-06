@@ -4,6 +4,11 @@ import styles from './Portfolio.module.css';
 import Project from './Project';
 
 // Imagens dos slides
+// Ctrl+PlayMovie
+import ctrlplaymovie0 from '../../img/slides/ctrlplaymovie/ctrlplaymovie-0.png';
+import ctrlplaymovie1 from '../../img/slides/ctrlplaymovie/ctrlplaymovie-1.png';
+import ctrlplaymovie2 from '../../img/slides/ctrlplaymovie/ctrlplaymovie-2.png';
+
 // Virtual Notebook
 import virtualnotebook0 from '../../img/slides/virtualnotebook/virtualnotebook-0.png';
 import virtualnotebook1 from '../../img/slides/virtualnotebook/virtualnotebook-1.png';
@@ -29,31 +34,70 @@ const Portfolio = () => {
       <div className={styles.divisorLine} style={{ height: '216px' }}></div>
 
       <Project
-        slides={[virtualnotebook0, virtualnotebook1]}
-        projectTitle='Front-End/Design - Programa Virtual Notebook'
-        slidesTitle='Desenvolvimento Fullstack “Virtual Notebook”'
-        detailsDate='Em desenvolvimento desde agosto'
+        slides={[ctrlplaymovie2, ctrlplaymovie0, ctrlplaymovie1]}
+        projectTitle='Front-End/Design - Site de filmes'
+        slidesTitle='Desenvolvimento Front-end “Ctrl+PlayMovie”'
+        detailsDate='set. de 2022'
       >
-        <p>Software desktop cross-platform feito com o framework JavaScript 
-        <span> Electron</span> e a biblioteca <span>React Js</span>.
-        Esse projeto foi prototipado através do <span>Figma</span>.</p>
-        <p>Foi utilizado o framework <span>Express Js</span> do 
-        <span> Node Js</span> para roteamento de <span>API </span>
-        e integração com um banco de dados <span>MongoDB</span></p>
+        <p>
+          Site prototipado com o <span>Figma</span>, consome{' '}
+          <span>API REST</span> de filmes <span>OMDb</span> e mostra
+          informações. Feito com <span>React Js</span>, utilizando de conceitos
+          como <span>Context</span> e<span> Custom Hooks</span>.
+        </p>
+        <p>
+          Feito de forma responsiva com <span>CSS Modules</span>.
+        </p>
       </Project>
 
       <div className={styles.divisorLine} style={{ height: '216px' }}></div>
 
       <Project
-        slides={[temvagas0, temvagas1, temvagas2, temvagas3, temvagas4, temvagas5]}
+        slides={[virtualnotebook0, virtualnotebook1]}
+        projectTitle='Front-End/Design - Programa Virtual Notebook'
+        slidesTitle='Desenvolvimento Fullstack “Virtual Notebook”'
+        detailsDate='Em desenvolvimento desde agosto'
+      >
+        <p>
+          Software desktop cross-platform feito com o framework JavaScript
+          <span> Electron</span> e a biblioteca <span>React Js</span>. Esse
+          projeto foi prototipado através do <span>Figma</span>.
+        </p>
+        <p>
+          Foi utilizado o framework <span>Express Js</span> do
+          <span> Node Js</span> para roteamento de <span>API </span>e integração
+          com um banco de dados <span>MongoDB</span>
+        </p>
+      </Project>
+
+      <div className={styles.divisorLine} style={{ height: '216px' }}></div>
+
+      <Project
+        slides={[
+          temvagas0,
+          temvagas1,
+          temvagas2,
+          temvagas3,
+          temvagas4,
+          temvagas5,
+        ]}
         projectTitle='UI/UX Design - Dashboard e site de empregos'
         slidesTitle='Design System Responsivo “TemVagas”'
         detailsDate='fev. à mar. de 2022'
         mobileVersion={false}
       >
-        <p>Protótipo de aplicação mobile criado em <span>baixa</span> e <span>alta fidelidade</span>, utilizando o software Figma.</p>
-        <p>Foi feito <span>Design System próprio</span> para a empresa, com paleta de cores, variáveis tipográficas e espaçamentos bem definidos.</p>
-        <p>Foi utilizado amplamente <span>conceitos de UX</span> e <span>testes de usabilidade</span> durante o seu desenvolvimento</p>
+        <p>
+          Protótipo de aplicação mobile criado em <span>baixa</span> e{' '}
+          <span>alta fidelidade</span>, utilizando o software Figma.
+        </p>
+        <p>
+          Foi feito <span>Design System próprio</span> para a empresa, com
+          paleta de cores, variáveis tipográficas e espaçamentos bem definidos.
+        </p>
+        <p>
+          Foi utilizado amplamente <span>conceitos de UX</span> e{' '}
+          <span>testes de usabilidade</span> durante o seu desenvolvimento
+        </p>
       </Project>
 
       <div className={styles.divisorLine} style={{ height: '216px' }}></div>
@@ -65,15 +109,27 @@ const Portfolio = () => {
         detailsDate='nov. à dez. de 2021'
         mobileVersion={true}
       >
-        <p>Protótipo de aplicação mobile criado em <span>baixa</span> e <span>alta fidelidade</span>, utilizando o software Figma.</p>
-        <p>Foi feito <span>Design System próprio</span> para a empresa, com paleta de cores, variáveis tipográficas e espaçamentos bem definidos.</p>
-        <p>Foi utilizado amplamente <span>conceitos de UX</span> e <span>testes de usabilidade</span> durante o seu desenvolvimento</p>
+        <p>
+          Protótipo de aplicação mobile criado em <span>baixa</span> e{' '}
+          <span>alta fidelidade</span>, utilizando o software Figma.
+        </p>
+        <p>
+          Foi feito <span>Design System próprio</span> para a empresa, com
+          paleta de cores, variáveis tipográficas e espaçamentos bem definidos.
+        </p>
+        <p>
+          Foi utilizado amplamente <span>conceitos de UX</span> e{' '}
+          <span>testes de usabilidade</span> durante o seu desenvolvimento
+        </p>
       </Project>
 
-      <div className={styles.divisorLine} style={{ height: '216px', marginBottom: '15px' }}></div>
-      <div className={styles.divisorLineEnd}/>
+      <div
+        className={styles.divisorLine}
+        style={{ height: '216px', marginBottom: '15px' }}
+      ></div>
+      <div className={styles.divisorLineEnd} />
     </section>
   );
-}
+};
 
 export default Portfolio;
